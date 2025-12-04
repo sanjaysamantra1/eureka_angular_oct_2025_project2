@@ -10,7 +10,7 @@ describe('MaterialDemo', () => {
     await TestBed.configureTestingModule({
       imports: [MaterialDemo]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(MaterialDemo);
     component = fixture.componentInstance;
@@ -19,5 +19,8 @@ describe('MaterialDemo', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should call f1', () => {
+    component.f1();
   });
 });
