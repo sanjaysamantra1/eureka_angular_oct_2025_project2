@@ -8,6 +8,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideEffects } from '@ngrx/effects';
+import { employeesReducer } from './ngrx/reducers/employee.reducer';
+import { EmployeeEffects } from './ngrx/effects/employee.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,8 +17,8 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
-    provideStore({ counterReducer, todoReducer }),
+    provideStore({ counterReducer, todoReducer,employees: employeesReducer }),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
-    provideEffects()
+    provideEffects(EmployeeEffects)
 ]
 };
