@@ -2,13 +2,15 @@ import { Component, signal } from '@angular/core';
 import { MaterialDemo } from './components/material-demo/material-demo';
 import { UserList } from './components/user-list/user-list';
 import { Counter } from './components/counter/counter';
+import { TodoCrud } from './components/todo-crud/todo-crud';
 
 @Component({
   selector: 'app-root',
   imports: [
     // MaterialDemo,
     // UserList
-    Counter
+    // Counter
+    TodoCrud
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
